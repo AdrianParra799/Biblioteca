@@ -1,5 +1,6 @@
 const express = require("express");
 const cors = require("cors");
+const crearTablas = require("./database/init");
 
 const app = express();
 const PORT = 8080;
@@ -13,6 +14,8 @@ app.get("/", (req, res) => {
   });
 });
 
-app.listen(PORT, () => {
-  console.log(`Servidor iniciado en http://localhost:${PORT}`);
+crearTablas().then(() => {
+  app.listen(PORT, () => {
+    console.log(`Servidor iniciado en http://localhost:${PORT}`);
+  });
 });
