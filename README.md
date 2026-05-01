@@ -401,3 +401,24 @@ Este flujo de trabajo permite separar cada funcionalidad y revisar los cambios a
 - Relación entre autores y libros.
 - Validaciones básicas en formularios del frontend.
 - Proyecto gestionado con Git, GitHub, ramas y Pull Requests.
+
+## Colección Postman
+
+El repositorio incluye una colección Postman para probar los endpoints de la API REST.
+
+El archivo se encuentra en:
+
+`postman/biblioteca.postman_collection.json`
+
+Para utilizarla:
+
+1. Abrir Postman.
+2. Pulsar en `Import`.
+3. Seleccionar el archivo `biblioteca.postman_collection.json`.
+4. Ejecutar las peticiones con el backend iniciado en `http://localhost:8080`.
+
+La colección incluye peticiones para probar:
+
+- CRUD de autores.
+- CRUD de libros.
+- Consulta de libros asociados a un autor.
