@@ -1,159 +1,83 @@
-\# Biblioteca
-
-
+# Biblioteca
 
 Aplicación web para la gestión de una biblioteca personal.
 
-
-
 El proyecto permite gestionar autores y libros mediante una aplicación dividida en dos partes:
 
+- **Backend**: API REST desarrollada con Node.js, Express y SQLite.
+- **Frontend**: aplicación web desarrollada con HTML, JavaScript, Bootstrap y Axios.
 
-
-\- \*\*Backend\*\*: API REST desarrollada con Node.js, Express y SQLite.
-
-\- \*\*Frontend\*\*: aplicación web desarrollada con HTML, JavaScript, Bootstrap y Axios.
-
-
-
-\## Descripción del proyecto
-
-
+## Descripción del proyecto
 
 La aplicación permite realizar operaciones CRUD completas sobre dos entidades principales:
 
-
-
-\- Autores
-
-\- Libros
-
-
+- Autores
+- Libros
 
 Cada libro pertenece a un autor, por lo que existe una relación entre ambas entidades.
 
+## Tecnologías utilizadas
 
+### Backend
 
-\## Tecnologías utilizadas
+- Node.js
+- Express
+- SQLite
+- Knex
+- CORS
+- Nodemon
 
+### Frontend
 
+- HTML
+- CSS
+- JavaScript
+- Bootstrap
+- Axios
+- Parcel
 
-\### Backend
+### Herramientas
 
+- Git
+- GitHub
+- Pull Requests
+- Postman
 
-
-\- Node.js
-
-\- Express
-
-\- SQLite
-
-\- Knex
-
-\- CORS
-
-\- Nodemon
-
-
-
-\### Frontend
-
-
-
-\- HTML
-
-\- CSS
-
-\- JavaScript
-
-\- Bootstrap
-
-\- Axios
-
-\- Parcel
-
-
-
-\### Herramientas
-
-
-
-\- Git
-
-\- GitHub
-
-\- Pull Requests
-
-\- Thunder Client / Postman / Hoppscotch para probar la API
-
-
-
-\## Estructura del proyecto
-
-
+## Estructura del proyecto
 
 ```text
-
 biblioteca
-
 ├── backend
-
 │   ├── src
-
 │   │   ├── app.js
-
 │   │   ├── configuration
-
 │   │   │   └── database.js
-
 │   │   ├── controller
-
 │   │   │   ├── autores.js
-
 │   │   │   └── libros.js
-
 │   │   ├── database
-
 │   │   │   └── init.js
-
 │   │   ├── route
-
 │   │   │   ├── autores.js
-
 │   │   │   └── libros.js
-
 │   │   └── service
-
 │   │       ├── autores.js
-
 │   │       └── libros.js
-
 │   └── package.json
-
 │
-
 ├── frontend
-
 │   ├── src
-
 │   │   ├── index.html
-
 │   │   ├── autores.html
-
 │   │   ├── libros.html
-
 │   │   ├── autores.js
-
 │   │   ├── libros.js
-
 │   │   └── styles.css
-
 │   └── package.json
-
 │
-
+├── postman
+│   └── biblioteca.postman_collection.json
 ├── README.md
-
 └── .gitignore
 ```
 
@@ -371,37 +295,6 @@ Respuesta esperada:
 }
 ```
 
-## Flujo de trabajo con Git
-
-El proyecto se ha desarrollado utilizando ramas de trabajo y Pull Requests.
-
-Cada funcionalidad se ha implementado en una rama independiente y posteriormente se ha fusionado en `develop`.
-
-Algunas ramas utilizadas durante el desarrollo han sido:
-
-- `feature/backend-setup`
-- `feature/database`
-- `feature/autores-backend`
-- `feature/libros-backend`
-- `feature/frontend-setup`
-- `feature/autores-frontend`
-- `feature/libros-frontend`
-- `feature/readme`
-- `feature/documentacion-api`
-
-Este flujo de trabajo permite separar cada funcionalidad y revisar los cambios antes de incorporarlos a la rama principal de desarrollo.
-
-## Funcionalidades implementadas
-
-- Backend con API REST.
-- Frontend con HTML, CSS y JavaScript.
-- CRUD completo de autores.
-- CRUD completo de libros.
-- Base de datos SQLite.
-- Relación entre autores y libros.
-- Validaciones básicas en formularios del frontend.
-- Proyecto gestionado con Git, GitHub, ramas y Pull Requests.
-
 ## Colección Postman
 
 El repositorio incluye una colección Postman para probar los endpoints de la API REST.
@@ -422,3 +315,46 @@ La colección incluye peticiones para probar:
 - CRUD de autores.
 - CRUD de libros.
 - Consulta de libros asociados a un autor.
+
+## Wiki
+
+La especificación de la API también está documentada en la Wiki del repositorio.
+
+## Flujo de trabajo con Git
+
+El proyecto se ha desarrollado utilizando ramas de trabajo y Pull Requests.
+
+Cada funcionalidad se ha implementado en una rama independiente y posteriormente se ha fusionado en `develop`.
+
+Algunas ramas utilizadas durante el desarrollo han sido:
+
+- `feature/backend-setup`
+- `feature/database`
+- `feature/autores-backend`
+- `feature/libros-backend`
+- `feature/frontend-setup`
+- `feature/autores-frontend`
+- `feature/libros-frontend`
+- `feature/readme`
+- `feature/documentacion-api`
+- `feature/postman-collection`
+- `feature/readme-postman`
+
+Este flujo de trabajo permite separar cada funcionalidad y revisar los cambios antes de incorporarlos a la rama principal de desarrollo.
+
+## Funcionalidades implementadas
+
+- Backend con API REST.
+- Frontend con HTML, CSS y JavaScript.
+- CRUD completo de autores.
+- CRUD completo de libros.
+- Base de datos SQLite.
+- Relación entre autores y libros.
+- Validaciones básicas en formularios del frontend.
+- Colección Postman para probar la API.
+- Wiki con especificación de la API.
+- Proyecto gestionado con Git, GitHub, ramas y Pull Requests.
+
+## Autor
+
+Proyecto realizado para la asignatura Entornos de Desarrollo.
