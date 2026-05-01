@@ -4,3 +4,4 @@ dist
 .env
 library.db
 biblioteca.db
+backend/biblioteca.db
