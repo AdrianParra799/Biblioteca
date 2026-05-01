@@ -1,0 +1,209 @@
+{
+  "info": {
+    "name": "Biblioteca API",
+    "description": "Colección de pruebas para la API REST del proyecto Biblioteca.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Autores",
+      "item": [
+        {
+          "name": "Listar autores",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/autores",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["autores"]
+            }
+          }
+        },
+        {
+          "name": "Obtener autor por id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/autores/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["autores", "1"]
+            }
+          }
+        },
+        {
+          "name": "Crear autor",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nombre\": \"Miguel de Cervantes\",\n  \"nacionalidad\": \"Española\",\n  \"anio_nacimiento\": 1547\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8080/autores",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["autores"]
+            }
+          }
+        },
+        {
+          "name": "Modificar autor",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nombre\": \"Miguel de Cervantes Saavedra\",\n  \"nacionalidad\": \"Española\",\n  \"anio_nacimiento\": 1547\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8080/autores/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["autores", "1"]
+            }
+          }
+        },
+        {
+          "name": "Eliminar autor",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/autores/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["autores", "1"]
+            }
+          }
+        },
+        {
+          "name": "Listar libros de un autor",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/autores/1/libros",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["autores", "1", "libros"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Libros",
+      "item": [
+        {
+          "name": "Listar libros",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/libros",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["libros"]
+            }
+          }
+        },
+        {
+          "name": "Obtener libro por id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/libros/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["libros", "1"]
+            }
+          }
+        },
+        {
+          "name": "Crear libro",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"titulo\": \"Don Quijote de la Mancha\",\n  \"genero\": \"Novela\",\n  \"anio_publicacion\": 1605,\n  \"autor_id\": 1\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8080/libros",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["libros"]
+            }
+          }
+        },
+        {
+          "name": "Modificar libro",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"titulo\": \"Don Quijote\",\n  \"genero\": \"Novela clásica\",\n  \"anio_publicacion\": 1605,\n  \"autor_id\": 1\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8080/libros/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["libros", "1"]
+            }
+          }
+        },
+        {
+          "name": "Eliminar libro",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/libros/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["libros", "1"]
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
